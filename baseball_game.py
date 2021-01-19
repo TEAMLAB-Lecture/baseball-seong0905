@@ -272,11 +272,12 @@ def main():
         while(True):
             user_input = input('Input guess number : ')
             if user_input == '0':
+                game = False
                 break
             if is_validated_number(user_input):
                 strikes, balls = get_strikes_or_ball(user_input, random_number)
                 print("Strikes :",strikes,", Balls :",balls)
-                if strikes == 3:
+                if strikes == 3:                    
                     while(True):
                         one_more_input = input('You win, one more(Y/N) ?')
                         if is_yes(one_more_input):
@@ -289,7 +290,7 @@ def main():
                             game = False
                             break
                         else:
-                            print("Wrong Input")
+                            print("Wrong Input, Input again")
                     break
                                 
             else:
