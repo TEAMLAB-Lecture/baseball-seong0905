@@ -181,9 +181,9 @@ def get_strikes_or_ball(user_input_number, random_number):
         if user_input_number[i]==random_number[i]:
             strikes +=1
             
-    balls = 3 - len(set(user_input_number)-set(random_number)) - strikes
+    ball = 3 - len(set(user_input_number)-set(random_number)) - strikes
     
-    result = [strikes, balls]
+    result = [strikes, ball]
     # ==================================
     return result
 
@@ -279,7 +279,7 @@ def main():
                 print("Strikes :",strikes,", Balls :",balls)
                 if strikes == 3:                    
                     while(True):
-                        one_more_input = input('You win, one more(Y/N) ?')
+                        one_more_input = input('You win, one more(Y/N)?')
                         if is_yes(one_more_input):
                             game = True
                             break
